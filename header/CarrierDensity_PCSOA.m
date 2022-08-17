@@ -1,4 +1,4 @@
-function [dn,G_larg] =CarrierDensity(L,n,signal,step)
+function [dn,G_larg] =CarrierDensityPCSOA(L,n,signal,step)
 variable
 format long
 global h c lambda J dz R_p n_p a1 a2 a3 alpha_1 alpha_2 eta q d ...
