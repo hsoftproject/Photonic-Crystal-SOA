@@ -4,7 +4,7 @@ format long
 variable;
 step = 14;
 signal=linspace(-10,10,step);
-
+%این یک تست تغییره
 dn=[];
 G_TM=[];
 
