@@ -30,7 +30,7 @@ lambda0 = 1.3e-6;  % converting to meters
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %from universal And soa constants  M.connelly (Wideband Semiconductor Optical Amplifier  Steady-State Numerical Model)
-d = 0.4e-6; % m active layer thickness
+d =0.2e-6; %0.4e-6; % m active layer thickness
 
 % dz=(7e10-6);
 
