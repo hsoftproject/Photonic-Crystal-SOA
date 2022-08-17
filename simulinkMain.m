@@ -18,7 +18,7 @@ for i=1:length(signal)
 
 Pump = 1e-3*10.^(signal(i)/10); % input pump signal
 
-[out,G]= CarrierDensity(len(j),n,Pump,step);
+[out,G]= CarrierDensity_SOA(len(j),n,Pump,step);
     end
     dn(i,:)=out;
     G_TM(i,:)=G;
