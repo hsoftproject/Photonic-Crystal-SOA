@@ -2,13 +2,13 @@ function [dn,G_larg] =CarrierDensity_PCSOA(L,n,signal,step)
 variable
 format long
 global h c lambda J dz R_p n_p a1 a2 a3 alpha_1 alpha_2 eta q d ...
-    lambda0  g Iav E g_mp S_sp Ng Neq
+    lambda0  g Iav E g_mp S_sp 
 
 
 lambda= 1350*1e-9;  % signal wavelength in m
 E=(h*c)/(lambda); % signal energy   refrense dar https://www.youtube.com/watch?v=3T8T7u2-aVY
 % E=(E)*(1/(1.6e-19)); % بر مبنای الکترون ولت
-J=(1e-3)/((300e-6))^3; % current density بزرگتر از این مقدار
+J=(1e-3)/((300e-6)); % current density بزرگتر از این مقدار
 %  dz = (L*1e-6)/Nz; % spatial step
  %%%%%%%%%%%%%%%%%%%%%%
  dn(1)=n;
