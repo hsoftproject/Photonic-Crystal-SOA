@@ -2,7 +2,7 @@ clc ;
 clear all;
 format long
 variable;
-step = 39;
+step = 14;%39;
 signal=linspace(-10,10,step);
 
 dn=[];
@@ -12,13 +12,13 @@ G_TM=[];
 n= 1.1e24;
 dn=[];
 
-len= linspace(1*1e-6,1000*1e-6,step);%طول قطعه
+len= linspace(1*1e-6,300*1e-6,step);%طول قطعه
 for i=1:length(signal)
     for j = length(len):-1:1
 
 Pump = 1e-3*10.^(signal(i)/10); % input pump signal
 
-[out,G]= CarrierDensity_SOA(len(j),n,Pump,step);
+[out,G]= CarrierDensity_PCSOA(len(j),n,Pump,step);
     end
     dn(i,:)=out;
     G_TM(i,:)=G;

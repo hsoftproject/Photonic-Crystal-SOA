@@ -12,13 +12,13 @@ G_TM=[];
 n= 1.1e24;
 dn=[];
 
-len= linspace(1*1e-6,1000*1e-6,step);%طول قطعه
+len= linspace(1*1e-6,300*1e-6,step);%طول قطعه
 for i=1:length(signal)
     for j = length(len):-1:1
 
 Pump = 1e-3*10.^(signal(i)/10); % input pump signal
 
-[out,G]= CarrierDensity_SOA(len(j),n,Pump,step);
+[out,G]= CarrierDensity_PCSOA(len(j),n,Pump,step);
     end
     dn(i,:)=out;
     G_TM(i,:)=G;
@@ -53,7 +53,7 @@ end
  figure(2)
 
 %%%%%%%%%%%%%%
-[X,Y]=meshgrid(flip(signal),linspace(1000,0,length(dn)));
+[X,Y]=meshgrid(flip(signal),linspace(300,0,length(dn)));
 %  surf(X,(Y),(dn));
 % contour(X,(Y),n);
 plot3(X,(Y),(dn));
@@ -67,7 +67,7 @@ grid on
  figure(3)
 
 %%%%%%%%%%%%%%
-[X_G,Y_G]=meshgrid(flip(signal),linspace(1000,0,length(G_TM)));
+[X_G,Y_G]=meshgrid(flip(signal),linspace(300,0,length(G_TM)));
 %  surf(X_G,Y_G,G_TM);
 % contour(X_G,Y_G,G_TM);
 plot3(X_G,(Y_G),(G_TM));

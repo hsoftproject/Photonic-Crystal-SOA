@@ -20,7 +20,7 @@ confin_TM=0.12;
 confin_optional=0.465;
 dN_TEbar_dn=-1.44e-26;
 dN_TMbar_dn=-1.20e-26;
-alpha_1=3000;%*[u.m^1];
+alpha_1=1450;%3000;%*[u.m^1];
 alpha_2=0;%2.7e-21;%unitConvert(2.7e-21*[u.m^2],u.m^-1);
 q=1.602e-19;
 Nz=40; % number of spatial divisions
@@ -48,3 +48,7 @@ confin_TM=0.12;
 
 dN_TEbar_dn=-1.44e-26;
 dN_TMbar_dn=-1.20e-26;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%PCSOA Parameters
+Ng=100;
+Neq=3;
