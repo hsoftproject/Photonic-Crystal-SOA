@@ -2,7 +2,7 @@ clc ;
 clear all;
 format long
 variable;
-step = 14;%39;
+step = 39;
 signal=linspace(-10,10,step);
 
 dn=[];

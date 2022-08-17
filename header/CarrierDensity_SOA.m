@@ -8,7 +8,7 @@ global h c lambda J dz R_p n_p a1 a2 a3 alpha_1 alpha_2 eta q d ...
 lambda= 1350*1e-9;  % signal wavelength in m
 E=(h*c)/(lambda); % signal energy   refrense dar https://www.youtube.com/watch?v=3T8T7u2-aVY
 % E=(E)*(1/(1.6e-19)); % بر مبنای الکترون ولت
-J=(34e-3)/((1000e-6))^3; % current density بزرگتر از این مقدار
+J=(17e-3)/((1000e-6))^3; % current density بزرگتر از این مقدار
 %  dz = (L*1e-6)/Nz; % spatial step
  %%%%%%%%%%%%%%%%%%%%%%
  dn(1)=n;
