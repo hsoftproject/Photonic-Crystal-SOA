@@ -3,12 +3,12 @@ variable
 format long
 global h c lambda J dz R_p n_p a1 a2 a3 alpha_1 alpha_2 eta q d ...
     lambda0  g Iav E g_mp S_sp 
-
+d=0.01e-6;
 
 lambda= 1350*1e-9;  % signal wavelength in m
 E=(h*c)/(lambda); % signal energy   refrense dar https://www.youtube.com/watch?v=3T8T7u2-aVY
-% E=(E)*(1/(1.602e-19)); % بر مبنای الکترون ولت
-J=(1e-3)/((1000-6)); % current density بزرگتر از این مقدار
+% E=(E)*(1/(1.6e-19)); % بر مبنای الکترون ولت
+J=(1e-3)/((300e-6))^-3; % current density بزرگتر از این مقدار
 %  dz = (L*1e-6)/Nz; % spatial step
  %%%%%%%%%%%%%%%%%%%%%%
  dn(1)=n;
@@ -60,18 +60,15 @@ tau = (((A+(B*n)+((C)*(n.^2)))).^-1);%equation (8) /// درسته
   S_sp=F1.*((F2./F3)-2);
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%equation (10)%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Pin_prob=1e-3*10.^(1/10);
+Pin_prob=1e-3*10.^(3/10);
 Ain= sqrt(Pin_prob)./sqrt(E);
 
  Pump = sqrt(signal)./sqrt(E);
 I_input=(Ain+Pump);
      Iav=I_input*((G_s-1)/(g*(L)));
 
-I=10.2e-8;
-W=0.5e-6;
 
-%     out=(((eta*J)/(q*d))-((n)/(tau))-((g*Iav)/E)-((g_mp)));
-out=((I/(E*W*d*L))-((n)/(tau))-((g*Iav)/E)-((g_mp)*(S_sp)));
+    out=(((eta*J)/(q*d))-((n)/(tau))-((g*Iav)/E)-((g_mp)));
     chek=n-(out/(-1/tau));
  
 % fprintf("Step = %d , n root = %0.10f , eps =%d\n",I,n,b)
